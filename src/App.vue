@@ -7,7 +7,7 @@
           <img
             src="../public/conf-logo.png"
             alt="Left Logo"
-            class="h-15 md:w-[250px] sm:w-[150px] w-[100px]"
+            class="h-15 w-[250px]"
             
           />
         </div>
