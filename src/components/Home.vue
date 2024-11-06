@@ -20,7 +20,7 @@
                 <th
                   class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
                 >
-                  Moderator
+                  moderator
                 </th>
                 <th
                   class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
@@ -35,7 +35,7 @@
                 <th
                   class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
                 >
-                  Modirators
+                  moderators
                 </th>
 
                 <th
@@ -45,11 +45,11 @@
             </thead>
             <tbody>
               <tr v-for="(table, index) in tables" :key="index">
-                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm w-40">
                   <div class="flex">
                     <div>
                       <p class="text-gray-900 whitespace-no-wrap">
-                        {{ table.table_name ? table.table_name : "--" }}
+                        {{ table.name ? table.name : "--" }}
                       </p>
                     </div>
                   </div>
@@ -62,10 +62,10 @@
                   </p>
                 </td>
                 <td
-                  class="px-5 py-5 border-b text-left border-gray-200 bg-white text-sm"
+                  class="w-40 px-5 py-5 border-b text-left border-gray-200 bg-white text-sm"
                 >
                   <p class="text-gray-900 whitespace-no-wrap">
-                    {{ table.start_time }}
+                    {{ table.start_time }} - {{table.end_time}}
                   </p>
                 </td>
                 <td

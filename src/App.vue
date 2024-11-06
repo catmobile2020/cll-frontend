@@ -5,7 +5,7 @@
         <!-- Left Logo -->
         <div class="logos-dimintions">
           <img
-            src="../public/logo2.jpeg"
+            src="../public/logo2.png"
             alt="Left Logo"
             class="h-15"
           />
@@ -14,7 +14,7 @@
         <!-- Right Logo -->
         <div class="logos-dimintions">
           <img
-            src="../public/logo1.jpeg"
+            src="../public/logo1.png"
             alt="Right Logo"
             class="h-15"
           />
