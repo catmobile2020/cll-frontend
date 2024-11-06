@@ -5,18 +5,19 @@
         <!-- Left Logo -->
         <div class="logos-dimintions">
           <img
-            src="../public/logo2.png"
+            src="../public/conf-logo.png"
             alt="Left Logo"
-            class="h-15"
+            class="h-15 md:w-[250px] sm:w-[150px] w-[100px]"
+            
           />
         </div>
 
         <!-- Right Logo -->
         <div class="logos-dimintions">
           <img
-            src="../public/logo1.png"
+            src="../public/logo2.png"
             alt="Right Logo"
-            class="h-15"
+            class="h-15  sm:w-[150px] w-[100px]"
           />
         </div>
       </div>
@@ -38,7 +39,8 @@ export default {
   }
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+ 
+  font-family: "Verdana", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

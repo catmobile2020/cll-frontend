@@ -2,106 +2,92 @@
   <div class="mx-auto px-4 sm:px-8">
     <div class="py-8">
       <div v-if="loading" class="flex justify-center items-center py-8">
-       
-         <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
+        <div
+          class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"
+        ></div>
       </div>
       <div v-else class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
         <div
           class="inline-block min-w-full shadow-md rounded-lg overflow-hidden"
         >
-          <table class="min-w-full leading-normal">
+          <table
+            class="min-w-full leading-normal border-separate"
+            style="border-spacing: 5px 5px"
+          >
             <thead>
               <tr>
                 <th
-                  class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                  class="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wider"
+                  style="background-color: #114576; color: white"
                 >
                   Table
                 </th>
                 <th
-                  class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                  class="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wider"
+                  style="background-color: #114576; color: white"
                 >
-                  moderator
+                  Moderator
                 </th>
                 <th
-                  class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                  class="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wider"
+                  style="background-color: #114576; color: white"
                 >
-                  Time
+                  Case Discussion
                 </th>
-                <th
-                  class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
-                >
-                  Case discussion
-                </th>
-                <th
-                  class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
-                >
-                  moderators
-                </th>
-
-                <th
-                  class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100"
-                ></th>
+                <th class="px-5 py-3" style="background-color: #114576"></th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="(table, index) in tables" :key="index">
-                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm w-40">
+                <td
+                  class="px-5 py-5 text-sm w-40"
+                  style="background-color: #e8eef0; border-spacing: 0 10px"
+                >
                   <div class="flex">
                     <div>
-                      <p class="text-gray-900 whitespace-no-wrap">
+                      <p
+                        class="text-gray-900 whitespace-no-wrap table-cell-color"
+                      >
                         {{ table.name ? table.name : "--" }}
                       </p>
                     </div>
                   </div>
                 </td>
                 <td
-                  class="px-5 py-5 text-left border-b border-gray-200 bg-white text-sm"
+                  class="px-5 py-5 text-left text-sm"
+                  style="background-color: #e8eef0"
                 >
-                  <p class="text-gray-900 whitespace-no-wrap">
+                  <p class="text-gray-900 whitespace-no-wrap table-cell-color">
                     {{ table.moderator }}
                   </p>
                 </td>
                 <td
-                  class="w-40 px-5 py-5 border-b text-left border-gray-200 bg-white text-sm"
+                  class="px-5 py-5 text-left text-sm"
+                  style="background-color: #e8eef0"
                 >
-                  <p class="text-gray-900 whitespace-no-wrap">
-                    {{ table.start_time }} - {{table.end_time}}
-                  </p>
-                </td>
-                <td
-                  class="px-5 py-5 text-left border-b border-gray-200 bg-white text-sm"
-                >
-                  <p class="text-gray-900 whitespace-no-wrap">
+                  <p class="text-gray-900 whitespace-no-wrap table-cell-color">
                     {{ table.case_discussion }}
                   </p>
                 </td>
                 <td
-                  class="px-5 py-5 text-left border-b border-gray-200 bg-white text-sm"
+                  class="px-5 py-5 text-sm text-right"
+                  style="background-color: #e8eef0"
                 >
-                  <p class="text-gray-900 whitespace-no-wrap">
-                    {{
-                      table.additional_moderators
-                        ? table.additional_moderators
-                        : "--"
-                    }}
-                  </p>
-                </td>
-                <td
-                  class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right"
-                >
-                  <router-link
-                    v-if="table.available"
-                    class="bg-blue-500 hover:bg-blue-700 text-white hover:text-white font-bold py-2 px-4 rounded-full"
-                    :to="'/register/' + table.id"
-                  >
-                    Register
-                  </router-link>
-                  <button
-                    v-else
-                    class="bg-blue-500 text-white font-bold py-2 px-4 rounded-full opacity-50 cursor-not-allowed"
-                  >
-                    Register
-                  </button>
+                  <div class="flex justify-center items-center">
+                    <router-link
+                      v-if="table.available"
+                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                      :to="'/register/' + table.id"
+                    >
+                      Register
+                    </router-link>
+                    <button
+                      v-else
+                      class="bg-blue-500 text-white font-bold py-2 px-4 rounded-full opacity-50 cursor-not-allowed"
+                    >
+                      Register
+                    </button>
+                  </div>
                 </td>
               </tr>
             </tbody>
@@ -160,5 +146,12 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
+}
+.table-cell-color {
+  color: #114576;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: left;
+  white-space: nowrap;
 }
 </style>
