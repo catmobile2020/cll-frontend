@@ -5,18 +5,18 @@
         <!-- Left Logo -->
         <div class="logos-dimintions">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            src="../public/logo2.jpeg"
             alt="Left Logo"
-            class="h-12"
+            class="h-15"
           />
         </div>
 
         <!-- Right Logo -->
         <div class="logos-dimintions">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+            src="../public/logo1.jpeg"
             alt="Right Logo"
-            class="h-12"
+            class="h-15"
           />
         </div>
       </div>
