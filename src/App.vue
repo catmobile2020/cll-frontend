@@ -15,7 +15,7 @@
         <!-- Right Logo -->
         <div class="logos-dimintions">
           <img
-            src="../public/logo2.png"
+            src="../public/logo1.png"
             alt="Right Logo"
             class="h-15  sm:w-[150px] w-[100px]"
           />
